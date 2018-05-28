@@ -13,7 +13,7 @@
    
    ">
    
-   <context:component-scan base-package="net.boota.javaFront.controller" />
+   <context:component-scan base-package="net.boota.javaFront" />
    <context:component-scan base-package="net.boota.javaBackend" />
    
    <bean id="viewResolver"

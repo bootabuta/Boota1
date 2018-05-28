@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top bottom_navbar_mr">
       <div class="container">
-        <a class="navbar-brand" href="#">A-ONE Vegetable</a>
+        <a class="navbar-brand" href="#">JBSprovider</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -13,7 +13,7 @@
             </li>
             
              <li id="viewVegetable">
-              <a class="nav-link" href="${contextRoot}/show/all/products">View Vegetable</a>
+              <a class="nav-link" href="${contextRoot}/show/all/products">View Products</a>
             </li>
             
             <li id="about">

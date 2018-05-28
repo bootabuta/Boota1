@@ -14,12 +14,24 @@
  	 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
  	 <spring.version>5.0.2.RELEASE</spring.version>
  	 <hibernate.version>5.2.7.Final</hibernate.version> 
+ 	 <jackson.version>2.9.5</jackson.version>
     </properties>
   
   
   <dependencies>
   
   	<!-- SPRING WEB MVC -->
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-context</artifactId>
@@ -30,7 +42,7 @@
 		<dependency>
 		    <groupId>com.h2database</groupId>
 		    <artifactId>h2</artifactId>
-		    <version>1.4.196</version>
+		    <version>1.4.197</version>
 		</dependency>
 		
 	<!-- Hibernate -->
@@ -60,6 +72,41 @@
 		    <groupId>org.apache.commons</groupId>
 		    <artifactId>commons-dbcp2</artifactId>
 		    <version>2.1.1</version>
+		    <exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions> 
+		</dependency>
+		
+		
+		<!-- SLF4J Logging -->
+		<dependency>
+    <groupId>ch.qos.logback</groupId>
+    <artifactId>logback-classic</artifactId>
+    <version>1.2.3</version>
+    <scope>test</scope>
+</dependency>
+
+			 
+	 	<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>jcl-over-slf4j</artifactId>
+		    <version>1.7.25</version>
+		</dependency>
+
+		<!-- Jackson -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>${jackson.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-annotations</artifactId>
+		    <version>${jackson.version}</version>
 		</dependency>
 		   
 	    
